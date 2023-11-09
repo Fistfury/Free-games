@@ -4,6 +4,7 @@ const searchBtn = document.getElementById('search-button');
 const platformSelect = document.getElementById('platform-select');
 const genreSelect = document.getElementById('genre-select');
 const sortButton = document.getElementById('sort-button');
+const container = document.getElementById('games-container');
 window.currentGames = [];
 
 
@@ -26,14 +27,23 @@ async function fetchGames(queryParams = {}) {
       return data;
     } catch (error) {
       console.error('Could not fetch games:', error);
+      renderErrorMessage(`Could not fetch games: ${error.message}`)
       return [];
     }
   }
 
-  
+  function renderErrorMessage(content) {
+    container.innerHTML = '';
+    const renderError = document.createElement('div');
+    renderError.className = 'no-games-error';
+    renderError.innerHTML = `<p>${content}</p>`;
+    container.appendChild(renderError);
+
+  }
   function renderGames(games) {
-    const container = document.getElementById('games-container');
+   
     container.innerHTML = ''; 
+ 
 
   if (games.length > 0) {
     games.forEach(game => {
@@ -48,10 +58,7 @@ async function fetchGames(queryParams = {}) {
     });
   } else {
 
-    const errorMessage = document.createElement('div');
-    errorMessage.className = 'no-games-error'; 
-    errorMessage.innerHTML = '<p>No games found :(</p>';
-    container.appendChild(errorMessage);
+   renderErrorMessage('No games found :(');
 
   }
 }
