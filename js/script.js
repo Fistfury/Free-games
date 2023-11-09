@@ -67,7 +67,7 @@ function sortGames () {
     
 
     if (!window.currentGames || window.currentGames.length === 0) {
-        console.error('No games to sort');
+        renderErrorMessage('No games to sort');
         return;
     }
     const sortedGames = window.currentGames.slice().sort((a, b) => a.title.localeCompare(b.title));
