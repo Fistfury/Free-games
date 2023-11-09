@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-image: url('/image/gameTest2.png'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.red-placeholder::placeholder {
+    color: red;
+    opacity: 1;
+}
+
+#search-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 50px auto 0;
+}
+#search-field {
+    border: 2px solid #333; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+#search-button, #filter-button, #sort-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-image: linear-gradient(to right, #6dd5ed, #2193b0);
+    border: 1px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+#search-button:hover, #filter-button:hover, #sort-button:hover {
+    background-color: #0056b3;
+    background-image: linear-gradient(to right, #2193b0, #6dd5ed);
+  }
+
+
+#search-button:hover::after,
+#filter-button:hover::after,
+#sort-button:hover::after {
+  opacity: 1;
+}
+
+  #platform-select, #genre-select {
+    border: 2px solid #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px; 
+    cursor: pointer; 
+  }
+
+  #filters-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 20px auto; /* Center the filters container with automatic horizontal margins */
+    display: flex;
+    justify-content: center; /* Center the children elements horizontally */
+    align-items: center; /* Align the children elements vertically */
+  }
+
+
+  .no-games-error {
+    color: #ff6b6b;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #games-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 auto;
+    
+    
+  
+  }
+
+  #games-container > div {
+    background-color:  rgba(255, 255, 255, 0.8); /* Or any color that suits the design */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+    margin-bottom: 20px;
+   
+  }
+
+  #game-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  #game-contatiner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+  }
+
+  #games-container h3, #games-container p {
+    text-align: center;
+  }
