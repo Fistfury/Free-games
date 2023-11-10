@@ -36,12 +36,13 @@ body {
     border-radius: 5px;
     margin-right: 10px;
 }
-#search-button, #filter-button, #sort-button {
+#search-button,#filter-button, #sort-button {
     background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
+    margin-left: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
     background-image: linear-gradient(to right, #6dd5ed, #2193b0);
@@ -49,7 +50,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
 }
-#search-button:hover, #filter-button:hover, #sort-button:hover {
+#search-button:hover,#filter-button:hover, #sort-button:hover {
     background-color: #0056b3;
     background-image: linear-gradient(to right, #2193b0, #6dd5ed);
   }
