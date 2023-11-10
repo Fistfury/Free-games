@@ -7,7 +7,6 @@ const sortBtn = document.getElementById('sort-button');
 const container = document.getElementById('games-container');
 window.currentGames = [];
 
-
 searchBtn.addEventListener('click', filterGames);
 sortBtn.addEventListener('click', sortGames);
 filterBtn.addEventListener('click', filterGames);
@@ -51,7 +50,7 @@ async function fetchGames(queryParams = {}) {
     games.forEach(game => {
       const gameElement = document.createElement('div');
       gameElement.innerHTML = `
-        <h3>${game.title}</h3>
+        <h3 class ="head-line">${game.title}</h3>
         <img src="${game.thumbnail}" alt="${game.title}">
         <p>${game.short_description}</p>
         <a href="${game.game_url}" target="_blank">Spela nu</a>
@@ -123,7 +122,6 @@ async function filterGames () {
         console.error('Error function', error);
         renderGames([], true);
     }
-        // searchInput.value = '';
 
 }
         
